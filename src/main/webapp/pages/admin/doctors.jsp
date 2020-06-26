@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=US-ASCII"
-	pageEncoding="US-ASCII" %>
+<%@ page language="java" contentType="text/html; charset=US-ASCII" pageEncoding="US-ASCII" %>
 <%@ page isELIgnored = "false" %>
 <%@ page session = "true" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -151,7 +150,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<form action = "addNewDoctor" method = "post">
+				<form action = "AddNewDoctor" method = "post">
 					<div class="modal-body">
 						<div class="row justify-content-md-center my-3">
 							<div class="col-8">

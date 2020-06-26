@@ -73,10 +73,10 @@
 			<div class="navbar-nav">
 				<a class="nav-item nav-link active" href="home">Home Page<span class="sr-only">(current)</span></a>
 				<a class="nav-item nav-link" href="account">Account</a>
-				<a class="nav-item nav-link" href="pers_info">Personal Information</a>
-				<a class="nav-item nav-link" href="see_doctor">See Doctor</a>
-				<a class="nav-item nav-link" href="find_patient">Find Patient</a>
-				<a class="nav-item nav-link" href="my_appointments">My Appointments</a>
+				<a class="nav-item nav-link" href="profile">Personal Information</a>
+				<a class="nav-item nav-link" href="doctors">See Doctor</a>
+				<a class="nav-item nav-link" href="patients">Find Patient</a>
+				<a class="nav-item nav-link" href="appointments">My Appointments</a>
 			</div>
 		</div>
 		<form class="form-inline" action="../sign_out" method = "post">
@@ -154,7 +154,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<form action = "addNewEvent" method = "post">
+				<form action = "AddNewEvent" method = "post">
 					<div class="modal-body">
 						<div class="row justify-content-md-center my-3">
 							<div class="col-8">

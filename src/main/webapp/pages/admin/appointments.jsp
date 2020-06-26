@@ -148,7 +148,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<form action = "deleteAllAppointmentsAfterDate" method = "post">
+				<form action = "DeleteAppointmentsAfterDate" method = "post">
 					<div class="modal-body">
 						<div class="row justify-content-md-center my-3">
 							<div class="col-6">

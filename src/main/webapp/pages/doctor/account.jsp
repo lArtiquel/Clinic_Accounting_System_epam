@@ -46,10 +46,10 @@
 			<div class="navbar-nav">
 				<a class="nav-item nav-link" href="home">Home Page</a>
 				<a class="nav-item nav-link active" href="account">Account<span class="sr-only">(current)</span></a>
-				<a class="nav-item nav-link" href="pers_info">Personal Information</a>
-				<a class="nav-item nav-link" href="see_doctor">See Doctor</a>
-				<a class="nav-item nav-link" href="find_patient">Find Patient</a>
-				<a class="nav-item nav-link" href="my_appointments">My Appointments</a>
+				<a class="nav-item nav-link" href="profile">Personal Information</a>
+				<a class="nav-item nav-link" href="doctors">See Doctor</a>
+				<a class="nav-item nav-link" href="patients">Find Patient</a>
+				<a class="nav-item nav-link" href="appointments">My Appointments</a>
 			</div>
 		</div>
 		<form class="form-inline" action="../sign_out" method = "post">
@@ -92,7 +92,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<form action = "editAccountInfo" method = "post">
+				<form action = "EditAccountInfo" method = "post">
 					<div class="modal-body">
 						<div class="row col-12">
 							<div class="col-6">

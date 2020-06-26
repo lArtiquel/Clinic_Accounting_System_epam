@@ -9,13 +9,15 @@ import java.sql.Date;
 
 public final class ControllerUtils {
 
-    public static void giveTicketToMyMessage(HttpSession session, String message){
+    public static void giveTicketToMyMessage(HttpServletRequest request, String message){
+        HttpSession session = request.getSession();
         session.setAttribute("message_ticket", true);
         session.setAttribute("message", message);
     }
 
-    public static void goThru_MessageByTicket_System(HttpSession session){
-        // implementing meine invention: display-message-with-ticket paradigm
+    public static void goThru_MessageByTicket_System(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        // meine invention: display-message-with-ticket paradigm
         if(session.getAttribute("message_ticket") != null){
             session.removeAttribute("message_ticket");
         } else {
@@ -23,14 +25,14 @@ public final class ControllerUtils {
         }
     }
 
-    public static void processNonexistentUserWithValidSessionParams
-            (HttpSession session, HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    public static String processNonexistentUserWithValidSessionParams
+            (HttpServletRequest request, HttpServletResponse response) {
+        HttpSession session = request.getSession();
         // invalidate this session and notify that user with such 'user_id' does not exist
         session.invalidate();
         session = request.getSession(true);
-        giveTicketToMyMessage(session, "User with such user_id not found. Sorry!");
-        response.sendRedirect(request.getContextPath() + "/sign_in");
+        giveTicketToMyMessage(request, "User with such user_id not found. Sorry!");
+        return "redirect:/sign_in";
     }
 
     public static void makeCorrectionForTimeZone(Date date){

@@ -157,7 +157,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<form action = "editPatient" method = "post">
+				<form action = "EditPatient" method = "post">
 					<div class="modal-body">
 					
 						<input type="hidden" id="editPatientID" name="patientID" />
