@@ -2,7 +2,7 @@ package com.Clinic_Accounting_System.dao;
 
 import com.Clinic_Accounting_System.dao.EventRH.EventListHandler;
 import com.Clinic_Accounting_System.entities.Event;
-import com.Clinic_Accounting_System.executor.Executor;
+import com.Clinic_Accounting_System.db.Executor;
 
 import java.sql.Date;
 import java.sql.SQLException;

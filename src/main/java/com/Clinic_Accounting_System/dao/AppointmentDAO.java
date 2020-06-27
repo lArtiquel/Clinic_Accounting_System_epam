@@ -3,8 +3,8 @@ package com.Clinic_Accounting_System.dao;
 import com.Clinic_Accounting_System.dao.AppointmentRH.AppointmentCountHandler;
 import com.Clinic_Accounting_System.dao.AppointmentRH.AppointmentListHandler;
 import com.Clinic_Accounting_System.entities.Appointment;
-import com.Clinic_Accounting_System.executor.Executor;
-import com.Clinic_Accounting_System.executor.ResultHandler;
+import com.Clinic_Accounting_System.db.Executor;
+import com.Clinic_Accounting_System.interfaces.ResultHandler;
 
 import java.sql.Date;
 import java.sql.SQLException;

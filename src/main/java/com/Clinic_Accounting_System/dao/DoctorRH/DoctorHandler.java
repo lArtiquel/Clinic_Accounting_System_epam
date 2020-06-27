@@ -2,7 +2,7 @@ package com.Clinic_Accounting_System.dao.DoctorRH;
 
 import com.Clinic_Accounting_System.dao.StaffEntityDAO;
 import com.Clinic_Accounting_System.entities.Doctor;
-import com.Clinic_Accounting_System.executor.ResultHandler;
+import com.Clinic_Accounting_System.interfaces.ResultHandler;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -1,7 +1,7 @@
-package com.Clinic_Accounting_System.executor;
+package com.Clinic_Accounting_System.db;
 
 
-import com.Clinic_Accounting_System.db.JdbcConnector;
+import com.Clinic_Accounting_System.interfaces.ResultHandler;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

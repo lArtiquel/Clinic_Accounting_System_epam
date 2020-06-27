@@ -1,6 +1,6 @@
 package com.Clinic_Accounting_System.commands.patient;
 
-import com.Clinic_Accounting_System.commands.Command;
+import com.Clinic_Accounting_System.interfaces.Command;
 import com.Clinic_Accounting_System.dao.UserDAO;
 import com.Clinic_Accounting_System.entities.User;
 import com.Clinic_Accounting_System.utils.ControllerUtils;

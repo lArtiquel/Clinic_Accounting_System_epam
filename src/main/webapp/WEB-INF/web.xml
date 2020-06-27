@@ -8,9 +8,11 @@
 
     <display-name>Client Accounting System web app</display-name>
 
+    <!--
     <welcome-file-list>
-        <welcome-file>sign_in</welcome-file>
+        <welcome-file>welcome.jsp</welcome-file>
     </welcome-file-list>
+    -->
 
     <error-page>
         <error-code>500</error-code>

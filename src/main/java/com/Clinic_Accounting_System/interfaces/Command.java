@@ -1,4 +1,4 @@
-package com.Clinic_Accounting_System.commands;
+package com.Clinic_Accounting_System.interfaces;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

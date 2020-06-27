@@ -7,7 +7,7 @@ import java.io.IOException;
 @WebFilter(urlPatterns = "/*",
         filterName = "CharacterEncodingFilter",
         description = "Sets response and request char encoding to UTF-8.")
-public class CharacterEncodingFilter implements Filter {
+public class CharacterEncoding implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {}

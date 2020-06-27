@@ -1,4 +1,4 @@
-package com.Clinic_Accounting_System.executor;
+package com.Clinic_Accounting_System.interfaces;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

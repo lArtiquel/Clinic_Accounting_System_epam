@@ -2,7 +2,7 @@ package com.Clinic_Accounting_System.dao.PatientRH;
 
 import com.Clinic_Accounting_System.dao.UserDAO;
 import com.Clinic_Accounting_System.entities.Patient;
-import com.Clinic_Accounting_System.executor.ResultHandler;
+import com.Clinic_Accounting_System.interfaces.ResultHandler;
 
 import java.sql.Date;
 import java.sql.ResultSet;

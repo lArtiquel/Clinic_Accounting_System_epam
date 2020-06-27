@@ -1,9 +1,8 @@
 package com.Clinic_Accounting_System.dao.StaffEntityRH;
 
 import com.Clinic_Accounting_System.dao.PatientDAO;
-import com.Clinic_Accounting_System.dao.UserDAO;
 import com.Clinic_Accounting_System.entities.StaffEntity;
-import com.Clinic_Accounting_System.executor.ResultHandler;
+import com.Clinic_Accounting_System.interfaces.ResultHandler;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

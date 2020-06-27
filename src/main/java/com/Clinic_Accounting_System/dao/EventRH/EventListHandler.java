@@ -1,7 +1,7 @@
 package com.Clinic_Accounting_System.dao.EventRH;
 
 import com.Clinic_Accounting_System.entities.Event;
-import com.Clinic_Accounting_System.executor.ResultHandler;
+import com.Clinic_Accounting_System.interfaces.ResultHandler;
 
 import java.sql.Date;
 import java.sql.ResultSet;

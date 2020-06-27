@@ -3,8 +3,8 @@ package com.Clinic_Accounting_System.dao;
 import com.Clinic_Accounting_System.dao.DoctorRH.DoctorHandler;
 import com.Clinic_Accounting_System.dao.DoctorRH.DoctorListHandler;
 import com.Clinic_Accounting_System.entities.Doctor;
-import com.Clinic_Accounting_System.executor.Executor;
-import com.Clinic_Accounting_System.executor.ResultHandler;
+import com.Clinic_Accounting_System.db.Executor;
+import com.Clinic_Accounting_System.interfaces.ResultHandler;
 
 import java.sql.SQLException;
 import java.util.List;

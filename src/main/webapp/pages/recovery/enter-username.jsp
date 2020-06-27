@@ -8,7 +8,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-	<title>Password Recovery</title>
+	<title>Password recovery</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
 	<meta name="author" content="Artique">
@@ -17,7 +17,7 @@
 	<!-- Latest Bootstrap and datatables Bootstrap API ================================================-->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
 	<!-- My Page Favicon -->
-	<link rel="icon" type="image/png" href="${context}/static/images/icons/favicon.ico">
+	<link rel="icon" type="image/png" href="${context}/static/res/images/icons/favicon.ico">
 	<!-- My CSS -->
 	<link rel="stylesheet" type="text/css" href="${context}/static/css/myBackgrounds.css">
 	
@@ -45,29 +45,24 @@
 		
 			<div class="mt-5 mb-3">
 				<div class="text-center">
-					<h2 class="bg-secondary text-white">&darr;Please, enter code from email message and new password&darr;</h2>
+					<h2 class="bg-secondary text-white">&darr;Please, enter username&darr;</h2>
 				</div>
 			</div>
 
-			<form action="pass_recovery/enter_code" method="post">
+			<form action="ProcessEnterUsernameForm" method="post">
 				<div class = "row justify-content-center my-2">
-					<div class="col-6 my-3">
-						<label class="bg-dark text-white" for="codeInput"><b>Email code:</b></label>
-						<input type="text" class="form-control" name="email_code" id="codeInput" required />  
+					<div class="col-6 mt-5 mb-2">
+						<label class="bg-dark text-white" for="usernameInput"><b>Username:</b></label>
+						<input type="text" class="form-control" name="username" id="usernameInput" maxlength = 30 required />  
 					</div>
 				</div>
 				<div class = "row justify-content-center my-2">
-					<div class="col-6 mt-3 mb-2">
-						<label class="bg-dark text-white" for="newPasswordInput"><b>New password:</b></label>
-						<input type="password" class="form-control" name="new_password" id="newPasswordInput" maxlength=30 required /> 
-					</div>
-				</div>
-				<div class = "row justify-content-center my-2">
-					<div class="col-6 mt-2">
-						<button type = "submit" class="btn btn-primary form-control">Apply changes</button>
+					<div class="col-6">
+						<button type = "submit" class="btn btn-primary form-control">Go next-></button>
 					</div>
 				</div>
 			</form>
+
 		</div>
 	</div>
 	

@@ -1,6 +1,6 @@
 package com.Clinic_Accounting_System.dao.UserRH;
 
-import com.Clinic_Accounting_System.executor.ResultHandler;
+import com.Clinic_Accounting_System.interfaces.ResultHandler;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

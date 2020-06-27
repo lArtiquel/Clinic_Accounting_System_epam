@@ -32,12 +32,16 @@ public final class ControllerUtils {
         session.invalidate();
         session = request.getSession(true);
         giveTicketToMyMessage(request, "User with such user_id not found. Sorry!");
-        return "redirect:/sign_in";
+        return "redirect:/login";
     }
 
     public static void makeCorrectionForTimeZone(Date date){
         // making 'wind correction' cuz actually JS picker returning one day back date(because it's returning GMT-0, and i'm in GMT+3), i.e if we pick 23 Feb 00:00:00, it'll return 22 Feb 21:00:00
         date.setTime(date.getTime()+1000*60*60*24);
+    }
+
+    public static String fetchPath(HttpServletRequest request) {
+        return request.getRequestURI().substring(request.getContextPath().length());
     }
 
 }

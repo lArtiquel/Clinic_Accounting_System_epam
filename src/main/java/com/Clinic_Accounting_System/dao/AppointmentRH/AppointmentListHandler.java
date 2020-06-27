@@ -3,7 +3,7 @@ package com.Clinic_Accounting_System.dao.AppointmentRH;
 import com.Clinic_Accounting_System.dao.DoctorDAO;
 import com.Clinic_Accounting_System.dao.PatientDAO;
 import com.Clinic_Accounting_System.entities.Appointment;
-import com.Clinic_Accounting_System.executor.ResultHandler;
+import com.Clinic_Accounting_System.interfaces.ResultHandler;
 
 import java.sql.Date;
 import java.sql.ResultSet;

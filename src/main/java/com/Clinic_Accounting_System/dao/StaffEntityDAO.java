@@ -2,7 +2,7 @@ package com.Clinic_Accounting_System.dao;
 
 import com.Clinic_Accounting_System.dao.StaffEntityRH.StaffEntityHandler;
 import com.Clinic_Accounting_System.entities.StaffEntity;
-import com.Clinic_Accounting_System.executor.Executor;
+import com.Clinic_Accounting_System.db.Executor;
 
 import java.sql.SQLException;
 
