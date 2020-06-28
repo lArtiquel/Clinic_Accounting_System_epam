@@ -53,7 +53,7 @@
 	<div class="my-5 d-flex align-items-center flex-column justify-content-center h-100 text-white" id="header">
 
 		<h2 class="display-4">Login</h2>
-		<form action="auth/ProcessLoginForm" method = "post">
+		<form action="ProcessLoginForm" method = "post">
 			<div class="form-group my-2">
 				<input class="form-control form-control-lg" name="username" placeholder="Username" type="text" required>
 			</div>
@@ -66,7 +66,7 @@
 				<label for="rem_me_Cb">Remember me</label>
 				</div>
 				<div class="col-md-6 text-right">
-				<a href="recovery/EnterUsername"><i>Forgot</i></a>
+				<a href="recovery/enter-username"><i>Forgot</i></a>
 				</div>
 			</div>
 			<div class="form-group my-2">
@@ -75,7 +75,7 @@
 		</form>
 			
 		<div class = "row justify-content-center">
-			Not registered yet? <a href="registration/registrationForm"><i>Register now!</i></a>
+			Not registered yet? <a href="registration"><i>Register now!</i></a>
 		</div>
 
 	</div>

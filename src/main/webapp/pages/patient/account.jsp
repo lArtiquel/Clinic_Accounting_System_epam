@@ -51,7 +51,7 @@
 				<a class="nav-item nav-link" href="appointments">My Appointments</a>
 			</div>
 		</div>
-		<form class="form-inline" action="../auth/ProcessLogoutForm" method = "post">
+		<form class="form-inline" action="../logout" method = "post">
 			<button class="btn btn-info btn-lg my-2 my-sm-0" type="submit">Sign out</button>
 		</form>
 	</nav>
@@ -91,7 +91,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<form action = "EditAccountInfo" method = "post">
+				<form action = "EditCredentials" method = "post">
 					<div class="modal-body">
 						<div class="row col-12">
 							<div class="col-6">
