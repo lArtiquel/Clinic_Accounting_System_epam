@@ -5,11 +5,13 @@ import com.cas.interfaces.Command;
 import com.cas.dao.AppointmentDAO;
 import com.cas.dao.DoctorDAO;
 import com.cas.utils.ControllerUtils;
+import lombok.extern.log4j.Log4j2;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 
+@Log4j2
 @Controller(path = "/admin/DeleteDoctor",
         description = "Delete doctor and redirect back to the doctors page.")
 public class DeleteDoctor implements Command {
@@ -21,7 +23,13 @@ public class DeleteDoctor implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response)
             throws SQLException {
         // get docID param from request
-        Long docID = Long.parseLong(request.getParameter("docID"));
+        Long docID = 0L;
+        try {
+            Long.parseLong(request.getParameter("docID"));
+        } catch(NumberFormatException e){
+            log.error(getClass().getName() + " just threw NumberFormat exception.");
+            return "forward:/pages/errors/500.jsp";
+        }
 
         // remove all doc's appointments
         appointmentDAO.getAppointmentsByDocId(docID);

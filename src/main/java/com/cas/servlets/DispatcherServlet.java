@@ -5,6 +5,7 @@ import com.cas.interfaces.Command;
 import com.cas.utils.ControllerUtils;
 import lombok.extern.log4j.Log4j2;
 
+import javax.servlet.DispatcherType;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +22,7 @@ import java.sql.SQLException;
         loadOnStartup = 1)
 public class DispatcherServlet extends HttpServlet{
 
-    // same as this servlet mapped to
+    // same prefix as this servlet mapped to
     public static final String SERVLET_PREFIX = "/app";
 
     @Override
@@ -29,7 +30,7 @@ public class DispatcherServlet extends HttpServlet{
         /*
             My invention:
                 Every get request should go thru `MessageByTicket` system
-                It needed to display message popups only once on client
+                It needed to display message popups only once on the client.
          */
         ControllerUtils.goThru_MessageByTicket_System(request);
         processRequest(request, response);
@@ -45,7 +46,7 @@ public class DispatcherServlet extends HttpServlet{
         Explanation:
             if URI is https://art.com/CAS/app/admin/home
             where art.com/CAS is contextPath
-            path of that dispatcher servlet should be equal /app/admin/home
+            so, path should be equal /app/admin/home
     */
     private void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -71,10 +72,12 @@ public class DispatcherServlet extends HttpServlet{
                 action = "forward:/pages/errors/404.jsp";
             }
         } catch (SQLException e) {
-            log.error("SQLException. Exception message: " + e.getMessage());
+            log.error(command.getClass().getName() + " class threw SQLException." +
+                    "Message: " + e.getMessage());
             action = "forward:/pages/errors/500.jsp";
         } catch (Exception e) {
-            log.error("General Exception. Exception message: " + e.getMessage());
+            log.error(command.getClass().getName() + " class threw Exception." +
+                    "Message: " + e.getMessage());
             action = "forward:/pages/errors/500.jsp";
         } finally {
             // check returned action on correctness

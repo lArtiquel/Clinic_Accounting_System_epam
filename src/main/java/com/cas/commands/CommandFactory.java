@@ -12,8 +12,6 @@ import java.util.Set;
 @Log4j2
 public final class CommandFactory {
 
-    // private static final String SCAN_PACKAGE_PATH = "com.CAS.commands";
-
     // singleton immutable map with all registered routes and its corresponding commands
     private static final Map<String, Command> COMMANDS = new HashMap<String, Command>();
 //    {{
@@ -90,11 +88,9 @@ public final class CommandFactory {
                 COMMANDS.put(clazz.getAnnotation(Controller.class).path(), (Command)clazz.newInstance());
             } catch (InstantiationException e) {
                 log.error("InstantiationException in CommandFactory. Failed to instantiate this class: " +
-                        clazz.getPackage().getName() +
                         clazz.getName());
             } catch (IllegalAccessException e) {
                 log.error("IllegalAccessException in CommandFactory. Failed to access this class: " +
-                        clazz.getPackage().getName() +
                         clazz.getName());
             }
         }
