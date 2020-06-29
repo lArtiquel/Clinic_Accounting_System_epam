@@ -9,14 +9,13 @@ import java.io.IOException;
         dispatcherTypes = {DispatcherType.FORWARD},
         filterName = "DirectPageAccessProtection",
         description = "Make JSP pages accessible only thru forwards. I.e only thru servlets.")
-public class PageAccessProtection implements Filter {
+public class PageAccess implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {}
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        System.out.println("direct page filter");
         chain.doFilter(request, response);
     }
 

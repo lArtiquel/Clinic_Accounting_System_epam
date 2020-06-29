@@ -1,5 +1,6 @@
 package com.cas.commands.recovery;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.PatientDAO;
 import com.cas.dao.UserDAO;
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 
+@Controller(path = "/recovery/ProcessEnterUsernameForm",
+        description = "Process entered username and redirect to appropriate page.")
 public class ProcessEnterUsernameForm implements Command {
 
     private final UserDAO userDAO = UserDAO.getInstance();

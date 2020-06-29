@@ -1,5 +1,6 @@
 package com.cas.commands.admin;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.AppointmentDAO;
 import com.cas.dao.PatientDAO;
@@ -10,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 
+@Controller(path = "/admin/DeletePatient",
+        description = "Delete patient and redirect back to the patients page.")
 public class DeletePatient implements Command {
 
     private final PatientDAO patientDAO = PatientDAO.getInstance();

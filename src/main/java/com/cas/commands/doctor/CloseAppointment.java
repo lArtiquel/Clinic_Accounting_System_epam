@@ -1,5 +1,6 @@
 package com.cas.commands.doctor;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.AppointmentDAO;
 import com.cas.dao.DoctorDAO;
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 import java.sql.SQLException;
 
+@Controller(path = "/doctor/CloseAppointment",
+        description = "Close appointment and redirect back to the appointments page.")
 public class CloseAppointment implements Command {
 
     private final PatientDAO patientDAO = PatientDAO.getInstance();

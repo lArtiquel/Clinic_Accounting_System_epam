@@ -1,5 +1,6 @@
 package com.cas.commands.admin;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.EventDAO;
 import com.cas.utils.ControllerUtils;
@@ -8,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 
+@Controller(path = "/admin/DeleteEvent",
+        description = "Delete event and redirect back to the events page.")
 public class DeleteEvent implements Command {
 
     private final EventDAO eventDAO = EventDAO.getInstance();

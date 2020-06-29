@@ -1,5 +1,6 @@
 package com.cas.commands.recovery;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.UserDAO;
 import com.cas.entities.User;
@@ -10,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 
+@Controller(path = "/recovery/ProcessEnterCodeForm",
+        description = "Process entered email code and redirect to appropriate page.")
 public class ProcessEnterCodeForm implements Command {
 
     private final UserDAO userDAO = UserDAO.getInstance();

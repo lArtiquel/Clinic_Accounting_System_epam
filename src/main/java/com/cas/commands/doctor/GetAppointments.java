@@ -1,18 +1,17 @@
 package com.cas.commands.doctor;
 
-import com.cas.interfaces.Command;
+import com.cas.interfaces.Controller;
 import com.cas.dao.AppointmentDAO;
 import com.cas.entities.Appointment;
-import lombok.extern.log4j.Log4j2;
+import com.cas.interfaces.Command;
 
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 import java.util.List;
 
-@Log4j2
-@WebServlet(name = "DoctorsMyAppointmentsPageServlet", urlPatterns = "/doctor/my_appointments")
+@Controller(path = "/doctor/appointments",
+        description = "Return page with appointments.")
 public class GetAppointments implements Command {
 
     private final AppointmentDAO appointmentDAO = AppointmentDAO.getInstance();

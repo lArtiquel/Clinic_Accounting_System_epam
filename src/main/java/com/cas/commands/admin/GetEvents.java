@@ -1,5 +1,6 @@
 package com.cas.commands.admin;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.EventDAO;
 import com.cas.entities.Event;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 import java.util.List;
 
+@Controller(path = "/admin/events",
+        description = "Return page with events.")
 public class GetEvents implements Command {
 
     private final EventDAO eventDAO = EventDAO.getInstance();

@@ -1,5 +1,6 @@
 package com.cas.commands.doctor;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.DoctorDAO;
 import com.cas.dao.PatientDAO;
@@ -12,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 import java.sql.SQLException;
 
+@Controller(path = "/doctor/EditProfile",
+        description = "Edit profile information and redirect back to the profile page.")
 public class EditProfile implements Command {
 
     private final DoctorDAO doctorDAO = DoctorDAO.getInstance();

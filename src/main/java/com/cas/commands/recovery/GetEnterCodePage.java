@@ -1,15 +1,14 @@
 package com.cas.commands.recovery;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
-import lombok.extern.log4j.Log4j2;
 
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 
-@Log4j2
-@WebServlet(name = "Recovery_EnterCodeServlet", urlPatterns = "/pass_recovery/enter_code")
+@Controller(path = "/recovery/enter-code",
+        description = "Return page where user can enter received email code.")
 public class GetEnterCodePage implements Command {
 
     @Override

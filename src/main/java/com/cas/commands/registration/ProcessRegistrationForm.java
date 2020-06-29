@@ -1,5 +1,6 @@
 package com.cas.commands.registration;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.PatientDAO;
 import com.cas.dao.UserDAO;
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 import java.sql.SQLException;
 
+@Controller(path = "/registration/ProcessRegistrationForm",
+        description = "Process registration form and redirect to appropriate page.")
 public class ProcessRegistrationForm implements Command {
 
     private final UserDAO userDAO = UserDAO.getInstance();

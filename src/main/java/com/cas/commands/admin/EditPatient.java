@@ -1,5 +1,6 @@
 package com.cas.commands.admin;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.PatientDAO;
 import com.cas.dao.UserDAO;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 import java.sql.SQLException;
 
+@Controller(path = "/admin/EditPatient",
+        description = "Edit patient and redirect back to the patients page.")
 public class EditPatient implements Command {
 
     private final UserDAO userDAO = UserDAO.getInstance();

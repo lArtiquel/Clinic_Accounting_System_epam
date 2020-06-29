@@ -1,5 +1,6 @@
 package com.cas.commands.doctor;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.UserDAO;
 import com.cas.entities.User;
@@ -10,6 +11,8 @@ import java.sql.SQLException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@Controller(path = "/doctor/account",
+        description = "Return account page with valid credentials.")
 public class GetAccount implements Command {
 
     private final UserDAO userDAO = UserDAO.getInstance();

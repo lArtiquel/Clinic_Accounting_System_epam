@@ -1,5 +1,6 @@
 package com.cas.commands.auth;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.UserDAO;
 import com.cas.entities.User;
@@ -12,6 +13,8 @@ import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
 
 @Log4j2
+@Controller(path = "/ProcessLoginForm",
+        description = "Process login form and redirect to appropriate page.")
 public class ProcessLoginForm implements Command {
 
     private final UserDAO userDAO = UserDAO.getInstance();

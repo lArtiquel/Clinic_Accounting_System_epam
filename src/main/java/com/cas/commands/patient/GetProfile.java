@@ -1,5 +1,6 @@
 package com.cas.commands.patient;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.PatientDAO;
 import com.cas.entities.Patient;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 
+@Controller(path = "/patient/profile",
+        description = "Return page with profile information.")
 public class GetProfile implements Command {
 
     private final PatientDAO patientDAO = PatientDAO.getInstance();

@@ -1,5 +1,6 @@
 package com.cas.commands.admin;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.AppointmentDAO;
 import com.cas.entities.Appointment;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 import java.util.List;
 
+@Controller(path = "/admin/appointments",
+        description = "Return page with appointments.")
 public class GetAppointments implements Command {
 
     private final AppointmentDAO appointmentDAO = AppointmentDAO.getInstance();

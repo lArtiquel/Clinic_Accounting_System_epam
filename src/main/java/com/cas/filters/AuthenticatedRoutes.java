@@ -28,7 +28,6 @@ public class AuthenticatedRoutes implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response,
                          FilterChain filterChain)
             throws IOException, ServletException {
-        System.out.println("authentication filter");
         // check session obj existence
         HttpServletRequest httpRequest = (HttpServletRequest)request;
         HttpServletResponse httpResponse = (HttpServletResponse)response;

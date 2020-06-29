@@ -1,5 +1,6 @@
 package com.cas.commands.admin;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.DoctorDAO;
 import com.cas.dao.PatientDAO;
@@ -16,6 +17,8 @@ import java.sql.Date;
 import java.sql.SQLException;
 
 @Log4j2
+@Controller(path = "/admin/AddNewDoctor",
+            description = "Add new doctor and redirect back to the doctor page.")
 public class AddNewDoctor implements Command {
 
     private final UserDAO userDAO = UserDAO.getInstance();

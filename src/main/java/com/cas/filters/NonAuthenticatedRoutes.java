@@ -25,7 +25,6 @@ public class NonAuthenticatedRoutes implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response,
                          FilterChain filterChain)
             throws IOException, ServletException {
-        System.out.println("non-auth filter");
         // fetch session from request
         HttpServletRequest httpRequest = (HttpServletRequest)request;
         HttpServletResponse httpResponse = (HttpServletResponse)response;

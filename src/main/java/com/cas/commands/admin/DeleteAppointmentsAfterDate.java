@@ -1,5 +1,6 @@
 package com.cas.commands.admin;
 
+import com.cas.interfaces.Controller;
 import com.cas.interfaces.Command;
 import com.cas.dao.AppointmentDAO;
 import com.cas.utils.ControllerUtils;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 import java.sql.SQLException;
 
+@Controller(path = "/admin/DeleteAppointmentsAfterDate",
+        description = "Delete all appointments older then date.")
 public class DeleteAppointmentsAfterDate implements Command {
 
     private final AppointmentDAO appointmentDAO = AppointmentDAO.getInstance();

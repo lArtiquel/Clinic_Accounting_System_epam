@@ -22,13 +22,12 @@ public class RootDispatcher implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response,
                          FilterChain filterChain)
             throws IOException, ServletException {
-        System.out.println("root dispatcher");
         // cast Servlet Response to HttpServletResponse
         HttpServletRequest httpRequest = (HttpServletRequest) request;
 
         // get path, ie www.art.com/hello/world, path info is /hello/world if contextPath www.art.com
         final String path = ControllerUtils.fetchPath(httpRequest);
-        System.out.println("path: " + path);
+
         if (path.startsWith("/static/")) {
             // filter only static resources
             filterChain.doFilter(request, response);
