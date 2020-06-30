@@ -150,7 +150,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<form action = "ChangePatientsMedicalHistory" method = "post">
+				<form action = "EditPatientsMedicalHistory" method = "post">
 					<input type="hidden" name="patientID" id="selectedPatientID"></input>
 					<div class="modal-body">
 						<div class="form-row my-3">

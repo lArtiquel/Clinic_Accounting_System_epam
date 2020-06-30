@@ -46,9 +46,9 @@ CREATE TABLE `staff_entity` (
 
 CREATE TABLE `users` (
   `id` bigint(20) NOT NULL,
-  `username` varchar(30) CHARACTER SET latin1 NOT NULL,
-  `password` varchar(30) CHARACTER SET latin1 NOT NULL,
-  `role` varchar(10) CHARACTER SET latin1 NOT NULL
+  `username` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `role` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE `user_info` (
@@ -81,12 +81,16 @@ ALTER TABLE `users`
 
 ALTER TABLE `user_info`
   ADD PRIMARY KEY (`id`);
+  
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
 
-
+ALTER TABLE `events`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `appointments`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `appointments`
   ADD CONSTRAINT `FK__appointments__user_info` FOREIGN KEY (`patient_id`) REFERENCES `user_info` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,

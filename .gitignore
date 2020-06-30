@@ -29,3 +29,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Hide production properties ###
+*prod.properties
