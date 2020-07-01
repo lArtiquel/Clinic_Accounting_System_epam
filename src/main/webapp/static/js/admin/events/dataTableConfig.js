@@ -4,9 +4,9 @@ $(document).ready(function () {
     let eventsTable = $('#dtEvents').DataTable({
         "pagingType": "full_numbers",
         "order": [[ 0, "asc" ]],
-        "dom": "<'row mx-3 my-2 font-italic'<'col-6'<'dtEventsButtonToolbar'>><'col-6'f>>" +
-            "<'row'<'col-sm-12'tr>>" +
-            "<'row mx-3 my-2'<'col-6'i><'col-6'p>>",
+        "dom": "<'row mx-3 my-2 font-italic'<'col-xs-12 col-md-6'<'dtEventsButtonToolbar'>><'col-xs-12 col-md-6'f>>" +
+            "<'row'<'col-12'tr>>" +
+            "<'row mx-3 my-2'<'col-xs-12 col-md-6'i><'col-xs-12 col-md-6'p>>",
         "columnDefs": [
             {
                 "targets": [ 0 ],
@@ -21,11 +21,11 @@ $(document).ready(function () {
 
     // setting content to aforementioned table button's toolbar
     $("div.dtEventsButtonToolbar").html(
-        '<div class="row col-12">'+
-            '<button id="addNewEventButton" class="btn btn-primary mx-2" data-toggle="modal" data-target="#addNewEventModal">Add event</button>'+
+        '<div class="d-flex justify-content-center justify-content-xl-start">'+
+            '<button id="addNewEventButton" class="btn btn-primary m-2" data-toggle="modal" data-target="#addNewEventModal">Add event</button>'+
             '<form action="DeleteEvent" method="post">' +
                 '<input type="hidden" id="eventIDToDelete" name="eventID"/>' +
-                '<button type="submit" id="deleteEventButton" class="btn btn-secondary mx-2 disabled" disabled >Delete event</button>' +
+                '<button type="submit" id="deleteEventButton" class="btn btn-danger m-2 disabled" disabled >Delete event</button>' +
             '</form>'+
         '</div>'
     );

@@ -4,9 +4,9 @@ $(document).ready(function () {
     let patientsTable = $('#dtPatients').DataTable({
         "pagingType": "full_numbers",
         "order": [[ 0, "asc" ]],
-        "dom": "<'row mx-3 my-2 font-italic'<'col-6'<'dtPatientsButtonToolbar'>><'col-6'f>>" +
-            "<'row'<'col-sm-12'tr>>" +
-            "<'row mx-3 my-2'<'col-6'i><'col-6'p>>",
+        "dom": "<'row mx-3 my-2 font-italic'<'col-xs-12 col-md-6'<'dtPatientsButtonToolbar'>><'col-xs-12 col-md-6'f>>" +
+            "<'row'<'col-12'tr>>" +
+            "<'row mx-3 my-2'<'col-xs-12 col-md-6'i><'col-xs-12 col-md-6'p>>",
         "columnDefs": [
             {
                 "targets": [ 0 ],
@@ -31,11 +31,11 @@ $(document).ready(function () {
 
     // setting content to aforementioned table button's toolbar
     $("div.dtPatientsButtonToolbar").html(
-        '<div class="row col-12">'+
-            '<button id="editPatientButton" class="btn btn-primary mx-2 disabled" disabled data-toggle="modal" data-target="#editPatientModal">Edit</button>'+
+        '<div class="d-flex justify-content-center justify-content-xl-start">'+
+            '<button id="editPatientButton" class="btn btn-primary m-2 disabled" disabled data-toggle="modal" data-target="#editPatientModal">Edit</button>'+
             '<form action="DeletePatient" method="post">' +
                 '<input type="hidden" id="deletePatientID" name="patientID"/>' +
-                '<button type="submit" id="deletePatientButton" class="btn btn-secondary mx-2 disabled" disabled >Delete</button>' +
+                '<button type="submit" id="deletePatientButton" class="btn btn-secondary m-2 disabled" disabled>Delete</button>' +
             '</form>'+
         '</div>'
     );

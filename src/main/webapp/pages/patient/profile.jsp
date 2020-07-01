@@ -6,27 +6,26 @@
 <html lang="en">
   <head>
 	<title>Patient's Personal Info Page</title>
-    <!-- Required meta tags -->
+	  <!-- Required meta tags -->
     <meta charset="UTF-8">
 	<meta name="author" content="Artique">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Latest Bootstrap and datatables Bootstrap API ================================================-->
+	  <!-- Latest Bootstrap and datatables Bootstrap API ================================================-->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
-	<!-- Date picker css -->
+	  <!-- Date picker css -->
 	<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
-	<!-- My Page Favicon -->
+	  <!-- My Page Favicon -->
 	<link rel="icon" type="image/png" href="${context}/static/images/icons/favicon.ico">
-	<!-- My CSS -->
+	  <!-- My CSS -->
 	<link rel="stylesheet" type="text/css" href="${context}/static/css/myBackgrounds.css">
-	
-	
-	<!-- JQuery, Bootstrap 4 -->
+	  <!-- JQuery, Bootstrap 4 -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
-	<!-- Date picker -->
+	  <!-- Date picker -->
 	<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <!-- My JS -->
+	  <!-- Font Awesome Glyphs -->
+	<script src="https://kit.fontawesome.com/7685c16a3d.js" crossorigin="anonymous"></script>
+	  <!-- My JS -->
 	<script type="text/javascript" src="${context}/static/js/utils/utils.js"></script>
 	<script type="text/javascript" src="${context}/static/js/patient/profile/datePickerConfig.js"></script>
 	
@@ -56,7 +55,9 @@
 			</div>
 		</div>
 		<form class="form-inline" action="../logout" method = "post">
-			<button class="btn btn-info btn-lg my-2 my-sm-0" type="submit">Sign out</button>
+			<button class="btn my-1" type="submit">
+				<i class="fas fa-sign-out-alt"></i>
+			</button>
 		</form>
 	</nav>
 
@@ -65,56 +66,56 @@
 			<h3 class="bg-secondary text-white">&darr;Personal Information&darr;</h3>
 		</div>
 
-		<div class = "row justify-content-md-center my-3">
-			<div class="col-6">
+		<div class = "row justify-content-center my-3">
+			<div class="col-xs-12 col-lg-6">
 				<label class="bg-dark text-white" for="firstnameInfo"><b>First Name:</b></label>
 				<input class="form-control" id="firstnameInfo" value="${requestScope.firstname}" readonly></input>   
 			</div>
 		</div>
-		<div class="row justify-content-md-center my-3">
-			<div class="col-6">
+		<div class = "row justify-content-center my-3">
+			<div class="col-xs-12 col-lg-6">
 				<label class="bg-dark text-white" for="midnameInfo"><b>Middle Name:</b></label>
 				<input class="form-control" id="midnameInfo" value="${requestScope.midname}" readonly></input>  
 			</div>
-		</div>			
-		<div class="row justify-content-md-center my-3">
-			<div class="col-6">
+		</div>
+		<div class = "row justify-content-center my-3">
+			<div class="col-xs-12 col-lg-6">
 				<label class="bg-dark text-white" for="lastnameInfo"><b>Last Name:</b></label>
 				<input class="form-control" id="lastnameInfo" value="${requestScope.lastname}" readonly></input>  
 			</div>
 		</div>
-		<div class="row justify-content-md-center my-3">
-			<div class="col-6">
+		<div class = "row justify-content-center my-3">
+			<div class="col-xs-12 col-lg-6">
 				<label class="bg-dark text-white" for="emailInfo"><b>Email:</b></label>
 				<input class="form-control" id="emailInfo" value="${requestScope.email}" readonly></input>
 			</div>
 		</div>
-		<div class="row justify-content-md-center my-3">
-			<div class="col-6">
+		<div class = "row justify-content-center my-3">
+			<div class="col-xs-12 col-lg-6">
 				<label class="bg-dark text-white" for="phoneInfo"><b>Phone:</b></label>
 				<input class="form-control" id="phoneInfo" value="${requestScope.phone}" readonly></input>
 			</div>
 		</div>
-		<div class="row justify-content-md-center my-3">
-			<div class="col-6">
+		<div class = "row justify-content-center my-3">
+			<div class="col-xs-12 col-lg-6">
 				<label class="bg-dark text-white" for="dobInfo"><b>Date of birth:</b></label>
 				<input class="form-control" id="dobInfo" value="${requestScope.dob.toString()}" readonly></input>
 			</div>
 		</div>
-		<div class="row justify-content-md-center my-3">
-			<div class="col-6">
+		<div class = "row justify-content-center my-3">
+			<div class="col-xs-12 col-lg-6">
 				<label class="bg-dark text-white" for="addressInfo"><b>Address:</b></label>
 				<input class="form-control" id="addressInfo" value="${requestScope.address}" readonly></input>
 			</div>
 		</div>
-		<div class="row justify-content-md-center my-3">
-			<div class="col-6">
+		<div class = "row justify-content-center my-3">
+			<div class="col-xs-12 col-lg-6">
 				<label class="bg-dark text-white" for="medHistoryInfo"><b>Medical history:</b></label>
 				<textarea class="form-control" id="medHistoryInfo" readonly>${requestScope.medHistory}</textarea>
 			</div>
 		</div>
-		<div class="row justify-content-md-center my-3">
-			<div class="col-6">
+		<div class = "row justify-content-center my-3">
+			<div class="col-xs-12 col-lg-6">
 				<button class = "form-control btn btn-primary" data-toggle="modal" data-target="#editPersonalInfoModal">Edit Personal Information</button>
 			</div>
 		</div>

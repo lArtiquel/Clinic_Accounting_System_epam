@@ -13,6 +13,7 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
+	<title>Clinic Accounting System</title>
     <meta charset="utf-8">
 	<meta name="author" content="Artique">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,8 +26,7 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
 	<!-- My CSS -->
 	<link rel="stylesheet" type="text/css" href="${context}/static/css/myBackgrounds.css">
-	
-	
+
 	<!-- Jquery and Twitter Bootstrap js -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -40,16 +40,18 @@
 		<%-- Displaying snackbar with error --%>
 		<script>$(document).ready(function () {showPopupSnackbar('${sessionScope.message}');});</script>
 	</c:if>
-	
-    <title>Clinic Accounting System</title>
+
   </head>
   <body class = "bg-light-green-mari" style="font-family: Ubuntu">
 	
-	<h1 class = "my-5 text-center" style="color:#800080">Welcome to "Clinic Accounting System" Web App!</h1>
+	<h2 class = "my-5 text-center" style="color:#800080">Welcome to "Clinic Accounting System" Web App!</h2>
+
 	</br>
-	<div class="my-5 d-flex align-items-center flex-column justify-content-center h-100 text-white" id="header">
+
+	<div class="my-4 d-flex align-items-center flex-column justify-content-center h-100 text-white" id="header">
 
 		<h2 class="display-4">Login</h2>
+
 		<form action="ProcessLoginForm" method = "post">
 			<div class="form-group my-2">
 				<input class="form-control form-control-lg" name="username" placeholder="Username" type="text" required>

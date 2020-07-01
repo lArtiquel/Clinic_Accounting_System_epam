@@ -6,22 +6,21 @@
 <html lang="en">
   <head>
 	<title>Admin's Home Page</title>
-    <!-- Required meta tags -->
+	  <!-- Required meta tags -->
     <meta charset="utf-8">
 	<meta name="author" content="Artique">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-<!-- My Page Favicon -->
+	  <!-- My Page Favicon -->
 	<link rel="icon" type="image/png" href="${context}/static/images/icons/favicon.ico">
-<!-- Latest Bootstrap ================================================-->
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
-<!-- My CSS -->
+	  <!-- Latest Bootstrap ================================================-->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
+	  <!-- My CSS -->
 	<link rel="stylesheet" type="text/css" href="${context}/static/css/myBackgrounds.css">
-	
-<!-- JQuery, Bootstrap 4 -->
+	  <!-- JQuery, Bootstrap 4 -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
+	  <!-- Font Awesome Glyphs -->
+	<script src="https://kit.fontawesome.com/7685c16a3d.js" crossorigin="anonymous"></script>
   </head>
   
   <body class = "bg-light-green-mari" style="font-family: Ubuntu">
@@ -40,7 +39,9 @@
 			</div>
 		</div>
 		<form class="form-inline" action="../logout" method = "post">
-			<button class="btn btn-info btn-lg my-2 my-sm-0" type="submit">Sign out</button>
+			<button class="btn my-1" type="submit">
+				<i class="fas fa-sign-out-alt"></i>
+			</button>
 		</form>
 	</nav>
 

@@ -6,21 +6,21 @@
 <html lang="en">
   <head>
 	<title>Patient's Account Page</title>
-    <!-- Required meta tags -->
+	  <!-- Required meta tags -->
     <meta charset="utf-8">
 	<meta name="author" content="Artique">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-<!-- My Page Favicon -->
+	  <!-- My Page Favicon -->
 	<link rel="icon" type="image/png" href="${context}/static/images/icons/favicon.ico">
-<!-- Latest Bootstrap and datatables Bootstrap API ================================================-->
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
-<!-- My CSS -->
+	  <!-- Latest Bootstrap and datatables Bootstrap API ================================================-->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
+	  <!-- My CSS -->
 	<link rel="stylesheet" type="text/css" href="${context}/static/css/myBackgrounds.css">
-	
-<!-- JQuery, Bootstrap 4 -->
+	  <!-- JQuery, Bootstrap 4 -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	  <!-- Font Awesome Glyphs -->
+	<script src="https://kit.fontawesome.com/7685c16a3d.js" crossorigin="anonymous"></script>
 	
 	<%-- Injecting error message if we have one --%>
 	<c:if test = "${sessionScope.message != null}">
@@ -49,7 +49,9 @@
 			</div>
 		</div>
 		<form class="form-inline" action="../logout" method = "post">
-			<button class="btn btn-info btn-lg my-2 my-sm-0" type="submit">Sign out</button>
+			<button class="btn my-1" type="submit">
+				<i class="fas fa-sign-out-alt"></i>
+			</button>
 		</form>
 	</nav>
 
@@ -57,22 +59,22 @@
 			<div class="text-center my-3">
 				<h3 class="bg-secondary text-white">&darr;Account Information&darr;</h3>
 			</div>
-	
-			<div class = "row justify-content-md-center my-3">
-				<div class="col-6">
+
+			<div class = "row justify-content-center my-3">
+				<div class="col-xs-12 col-lg-6">
 					<label class="bg-dark text-white" for="username"><b>Username:</b></label>
 					<input class="form-control" id="username" value="${requestScope.username}" readonly></input>   
 				</div>
 			</div>
-			<div class = "row justify-content-md-center my-3">
-				<div class="col-6">
+			<div class = "row justify-content-center my-3">
+				<div class="col-xs-12 col-lg-6">
 					<label class="bg-dark text-white" for="username"><b>Password:</b></label>
 					<input class="form-control" id="password" value="${requestScope.password}" readonly></input>   
 				</div>
 			</div>
-			
-			<div class="row justify-content-md-center my-3">
-				<div class="col-6">
+
+			<div class = "row justify-content-center my-3">
+				<div class="col-xs-12 col-lg-6">
 					<button class = "form-control btn btn-primary" data-toggle="modal" data-target="#editAccountInfoModal">Edit Account Information</button>
 				</div>
 			</div>

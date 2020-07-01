@@ -22,7 +22,7 @@ $(document).ready(function () {
         "pagingType": "full_numbers",
         "order": [[ 0, "asc" ]],
         "dom": "<'row mx-3 my-2'<'col-sm-12 col-md-6'<'asDoctorsAppointmentTableManageButtonsToolbar'>><'col-sm-12 col-md-6'f>>" +
-            "<'row'<'col-sm-12'tr>>" +
+            "<'row'<'col-12'tr>>" +
             "<'row mx-3 my-2'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
         "select": {"style": 'single'},
         "processing": true,
@@ -38,8 +38,8 @@ $(document).ready(function () {
 
     // setting content to aforementioned table button's toolbar
     $("div.asDoctorsAppointmentTableManageButtonsToolbar").html(
-        '<div>'+
-            '<button id="closeAppointmentButton" class="btn btn-primary mx-2 disabled">Close appointment</button>'+
+        '<div class="d-flex justify-content-center justify-content-xl-start">'+
+            '<button id="closeAppointmentButton" class="btn btn-primary m-2 disabled">Close appointment</button>'+
         '</div>'
     );
 
