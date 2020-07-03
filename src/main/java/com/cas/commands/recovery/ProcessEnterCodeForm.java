@@ -22,40 +22,48 @@ public class ProcessEnterCodeForm implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response)
             throws SQLException {
         // firstly, check if we have "forgot_page_user_id" attrib in session
-        if(RecoveryRoutines.checkForgotPageUsernameAttribInSession(request)){
+        if (!RecoveryRoutines.checkForgotPageUsernameAttribInSession(request)) {
+            return "redirect:/recovery/enter-username";
+        } else {
+            // scrap password and password confirm params
+            final String password = request.getParameter("new_password");
+            final String passwordConfirm = request.getParameter("new_password_confirmation");
 
-            // take "email_code" from request
-            String code = request.getParameter("email_code");
-            User user = userDAO.getById((Long)request.getSession().getAttribute("pass_recovery_user_id"));
+            // check if password and confirm pass are equal
+            if (!password.equals(passwordConfirm)) {
+                ControllerUtils.giveTicketToMyMessage(request, "Passwords are not equal!");
+                return "redirect:/recovery/enter-code";
+            } else {
+                // take "email_code" from request
+                String code = request.getParameter("email_code");
+                User user = userDAO.getById((Long) request.getSession().getAttribute("pass_recovery_user_id"));
 
-            if(code != null && user != null){
-                // if hashcode of password equals entered code
-                if(code.equals(credUtils.getHash(user.getPassword()))){
-                    // take new password from request scope
-                    String newPassword = request.getParameter("new_password");
-                    // check if password is following requirements, you can add yours
-                    if(credUtils.validate(newPassword)){
-                        // update password in db
-                        userDAO.updatePassword(user.getId(), newPassword);
-                        // notify user that password successfully changed and go sign in
-                        ControllerUtils.giveTicketToMyMessage(request, "Password successfully changed!");
-                        RecoveryRoutines.removeForgotPageAttributeFromSession(request);
-                        return "redirect:/login";
+                if (code != null && user != null) {
+                    // if hashcode of password equals entered code
+                    if (code.equals(credUtils.getHash(user.getPassword()))) {
+
+                        // check if password is following requirements, you can add yours
+                        if (credUtils.validate(password)) {
+                            // update password in db
+                            userDAO.updatePassword(user.getId(), password);
+                            // notify user that password successfully changed and go sign in
+                            ControllerUtils.giveTicketToMyMessage(request, "Password successfully changed!");
+                            RecoveryRoutines.removeForgotPageAttributeFromSession(request);
+                            return "redirect:/login";
+                        } else {
+                            ControllerUtils.giveTicketToMyMessage(request, "Password is less then 8 characters!");
+                            return "redirect:/recovery/enter-code";
+                        }
                     } else {
-                        ControllerUtils.giveTicketToMyMessage(request, "Password is less then 8 characters!");
+                        ControllerUtils.giveTicketToMyMessage(request, "Wrong verification code!");
                         return "redirect:/recovery/enter-code";
                     }
                 } else {
-                    ControllerUtils.giveTicketToMyMessage(request, "Wrong verification code!");
-                    return "redirect:/recovery/enter-code";
+                    ControllerUtils.giveTicketToMyMessage(request, "Sorry, we can't restore your password.");
+                    RecoveryRoutines.removeForgotPageAttributeFromSession(request);
+                    return "redirect:/login";
                 }
-            } else {
-                ControllerUtils.giveTicketToMyMessage(request, "Sorry, we can't restore your password.");
-                RecoveryRoutines.removeForgotPageAttributeFromSession(request);
-                return "redirect:/login";
             }
-        } else {
-            return "redirect:/recovery/enter-username";
         }
     }
 

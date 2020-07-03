@@ -48,7 +48,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarAltContent">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="home">Home Page</a>
+				<a class="nav-item nav-link" href="home">Home</a>
 				<a class="nav-item nav-link" href="account">Account</a>
 				<a class="nav-item nav-link active" href="profile">Personal Information<span class="sr-only">(current)</span></a>
 				<a class="nav-item nav-link" href="doctors">See Doctor</a>
@@ -245,7 +245,7 @@
 						</div>
 					</div><!-- end of modal body -->
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Edit</button>
 					</div>
 				</form>

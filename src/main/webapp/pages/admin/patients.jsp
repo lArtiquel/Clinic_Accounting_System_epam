@@ -160,7 +160,7 @@
 
 							<div class="col-5">
 								<div class="row my-2">
-									<h4 class="text-danger text-center">&darr;Old patient's account information&darr;</h4>
+									<h5 class="text-danger text-center">&darr;Old patient's account information&darr;</h5>
 								</div>
 								<div class="row my-2">
 									<label for="oldPatUsername"><b>Username:</b></label>
@@ -174,7 +174,7 @@
 							
 							<div class="col-5">
 								<div class="row my-2">
-									<h4 class="text-success text-center">&darr;New patient's account information&darr;</h4>
+									<h5 class="text-success text-center">&darr;New patient's account information&darr;</h5>
 								</div>
 								<div class="row my-2">
 									<label for="newPatUsername"><b>Username:</b></label>
@@ -193,7 +193,7 @@
 						
 							<div class="col-5">
 								<div class="row my-2">
-									<h4 class="text-danger text-center">&darr;Old patient's personal information&darr;</h4>
+									<h5 class="text-danger text-center">&darr;Old patient's personal information&darr;</h5>
 								</div>
 								<div class="row my-2">
 									<label for="oldPatFirstname"><b>First Name:</b></label>
@@ -227,7 +227,7 @@
 							
 							<div class="col-5">
 								<div class="row my-2">
-									<h4 class="text-success text-center">&darr;New patient's personal information&darr;</h4>
+									<h5 class="text-success text-center">&darr;New patient's personal information&darr;</h5>
 								</div>
 								<div class="row my-2">
 									<label for="newPatFirstname"><b>First Name:</b></label>
@@ -263,7 +263,7 @@
 							
 					</div><!-- end of modal body -->
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Edit patient info</button>
 					</div>
                 </form>

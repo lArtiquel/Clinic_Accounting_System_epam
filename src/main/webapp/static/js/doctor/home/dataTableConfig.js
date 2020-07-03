@@ -21,8 +21,8 @@ $(document).ready(function () {
 
     // setting content to aforementioned table button's toolbar
     $("div.dtEventsButtonToolbar").html(
-        '<div>'+
-            '<button id="addNewEventButton" class="btn btn-primary" data-toggle="modal" data-target="#addNewEventModal">Add event</button>'+
+        '<div class="d-flex justify-content-center justify-content-xl-start m-2">'+
+            '<button id="addNewEventButton" class="btn btn-primary" data-toggle="modal" data-target="#addNewEventModal">Add New Event</button>'+
         '</div>'
     );
 

@@ -15,9 +15,9 @@ public class GetEnterCodePage implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response)
             throws SQLException {
         if(RecoveryRoutines.checkForgotPageUsernameAttribInSession(request)){
-            return "forward:/pages/forgot/enter-email-code.jsp";
+            return "forward:/pages/recovery/enter-email-code.jsp";
         } else {
-            return "redirect:/recovery/enterUsername";
+            return "redirect:/recovery/enter-username";
         }
     }
 

@@ -42,25 +42,25 @@
 		
 			<div class="mt-5 mb-3">
 				<div class="text-center">
-					<h2 class="bg-secondary text-white">&darr;Please, enter code from email message and new password&darr;</h2>
+					<h4 class="bg-secondary text-white">&darr;Please, enter code from email message and new password&darr;</h4>
 				</div>
 			</div>
 
 			<form action="ProcessEnterCodeForm" method="post">
 				<div class = "row justify-content-center my-2">
-					<div class="col-6 my-3">
-						<label class="bg-dark text-white" for="codeInput"><b>Email code:</b></label>
+					<div class="col-8 my-2">
+						<label class="bg-dark text-white" for="codeInput"><b>Email Code:</b></label>
 						<input type="text" class="form-control" name="email_code" id="codeInput" required />  
 					</div>
-				</div>
-				<div class = "row justify-content-center my-2">
-					<div class="col-6 mt-3 mb-2">
-						<label class="bg-dark text-white" for="newPasswordInput"><b>New password:</b></label>
-						<input type="password" class="form-control" name="new_password" id="newPasswordInput" maxlength=30 required /> 
+					<div class="col-8 my-2">
+						<label class="bg-dark text-white" for="newPassword"><b>New Password:</b></label>
+						<input type="password" class="form-control" name="new_password" id="newPassword" maxlength=30 required />
 					</div>
-				</div>
-				<div class = "row justify-content-center my-2">
-					<div class="col-6 mt-2">
+					<div class="col-8 my-2">
+						<label class="bg-dark text-white" for="newPasswordConfirmation"><b>Confirm New Password:</b></label>
+						<input type="password" class="form-control" name="new_password_confirmation" id="newPasswordConfirmation" maxlength=30 required />
+					</div>
+					<div class="col-8 mt-2">
 						<button type = "submit" class="btn btn-primary form-control">Apply changes</button>
 					</div>
 				</div>

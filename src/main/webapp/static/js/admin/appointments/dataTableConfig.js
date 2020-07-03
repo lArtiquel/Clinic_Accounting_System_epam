@@ -14,8 +14,8 @@ $(document).ready(function () {
 
     // setting content to aforementioned table button's toolbar
     $("div.dtAppointmentsButtonToolbar").html(
-        '<div class="row col-12">'+
-            '<button id="deleteButton" class="btn btn-danger mx-2" data-toggle="modal" data-target="#deleteAppointmentsModal">Delete by date</button>'+
+        '<div class="d-flex justify-content-center justify-content-xl-start">'+
+            '<button id="deleteButton" class="btn btn-danger m-2" data-toggle="modal" data-target="#deleteAppointmentsModal">Delete by date</button>'+
         '</div>'
     );
 

@@ -55,7 +55,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarAltContent">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="home">Home Page</a>
+				<a class="nav-item nav-link" href="home">Home</a>
 				<a class="nav-item nav-link" href="account">Account</a>
 				<a class="nav-item nav-link" href="profile">Personal Information</a>
 				<a class="nav-item nav-link" href="doctors">See Doctor</a>

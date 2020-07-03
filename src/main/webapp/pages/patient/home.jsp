@@ -46,7 +46,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarAltContent">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link active" href="home">Home Page<span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link active" href="home">Home<span class="sr-only">(current)</span></a>
 				<a class="nav-item nav-link" href="account">Account</a>
 				<a class="nav-item nav-link" href="profile">Personal Information</a>
 				<a class="nav-item nav-link" href="doctors">See Doctor</a>

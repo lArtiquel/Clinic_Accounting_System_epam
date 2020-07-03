@@ -42,19 +42,17 @@
 		
 			<div class="mt-5 mb-3">
 				<div class="text-center">
-					<h2 class="bg-secondary text-white">&darr;Please, enter username&darr;</h2>
+					<h3 class="bg-secondary text-white">&darr;Please, enter username&darr;</h3>
 				</div>
 			</div>
 
 			<form action="ProcessEnterUsernameForm" method="post">
-				<div class = "row justify-content-center my-2">
-					<div class="col-6 mt-5 mb-2">
+				<div class = "row justify-content-center my-5">
+					<div class="col-8 my-2">
 						<label class="bg-dark text-white" for="usernameInput"><b>Username:</b></label>
 						<input type="text" class="form-control" name="username" id="usernameInput" maxlength = 30 required />  
 					</div>
-				</div>
-				<div class = "row justify-content-center my-2">
-					<div class="col-6">
+					<div class="col-8">
 						<button type = "submit" class="btn btn-primary form-control">Go next-></button>
 					</div>
 				</div>

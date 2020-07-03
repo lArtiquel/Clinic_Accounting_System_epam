@@ -31,6 +31,14 @@
 	<script type="text/javascript" src="${context}/static/js/utils/utils.js"></script>
 	<script type="text/javascript" src="${context}/static/js/registration/datePickerConfig.js"></script>
 
+	<%-- Injecting message if we only have one --%>
+	<c:if test = "${sessionScope.message != null}">
+	  <%-- Snackbar css and js function definition --%>
+	  <link rel="stylesheet" type="text/css" href="${context}/static/css/snackbar.css">
+	  <script type="text/javascript" src="${context}/static/js/snackbar.js"></script>
+	  <%-- Displaying snackbar with error --%>
+	  <script>$(document).ready(function () {showPopupSnackbar('${sessionScope.message}');});</script>
+	</c:if>
   </head>
   
   <body class = "bg-light-green-mari" style="font-family: Ubuntu">
@@ -38,20 +46,20 @@
 	<div class = "container">
 	
 		<div class="text-center mt-5 mb-2">
-			<h2 class="bg-secondary text-white">&darr;Please, fill up patient's personal info application&darr;</h2>
+			<h3 class="bg-secondary text-white">&darr;Please, fill up an application form&darr;</h3>
 		</div>
 
 		<form action="registration/ProcessRegistrationForm" method="post">
 			<div class = "row justify-content-center my-3">
 				<div class="col-xs-12 col-lg-6">
 					<label class="bg-dark text-white" for="usernameInput"><b>Username:</b></label>
-					<input type="text" class="form-control" id="usernameInput" name="username" required />
+					<input type="text" class="form-control" id="usernameInput" name="username" required minlength="8" />
 				</div>
 			</div>
 			<div class = "row justify-content-center my-3">
 				<div class="col-xs-12 col-lg-6">
 					<label class="bg-dark text-white" for="passwordInput"><b>Password:</b></label>
-					<input type="password" class="form-control" id="passwordInput" name="password" required />
+					<input type="password" class="form-control" id="passwordInput" name="password" required minlength="8" />
 				</div>
 			</div>
 			<div class = "row justify-content-center my-3">
@@ -105,6 +113,10 @@
 		</form>
 
 	</div>
+
+	<c:if test = "${sessionScope.message != null}">
+		<div id="snackbar"></div>
+	</c:if>
 
   </body>
 </html>

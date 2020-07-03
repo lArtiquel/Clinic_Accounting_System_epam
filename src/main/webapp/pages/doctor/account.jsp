@@ -41,7 +41,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarAltContent">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="home">Home Page</a>
+				<a class="nav-item nav-link" href="home">Home</a>
 				<a class="nav-item nav-link active" href="account">Account<span class="sr-only">(current)</span></a>
 				<a class="nav-item nav-link" href="profile">Personal Information</a>
 				<a class="nav-item nav-link" href="doctors">See Doctor</a>
@@ -70,7 +70,7 @@
 			<div class = "row justify-content-center my-3">
 				<div class="col-xs-12 col-lg-6">
 					<label class="bg-dark text-white" for="username"><b>Password:</b></label>
-					<input class="form-control" id="password" value="${requestScope.password}" readonly></input>   
+					<input type="password" class="form-control" id="password" value="${requestScope.password}" readonly></input>
 				</div>
 			</div>
 
@@ -119,7 +119,7 @@
 						</div>
 					</div><!-- end of modal body -->
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Edit</button>
 					</div>
 				</form>

@@ -35,7 +35,7 @@ $(document).ready(function () {
             '<button id="editPatientButton" class="btn btn-primary m-2 disabled" disabled data-toggle="modal" data-target="#editPatientModal">Edit</button>'+
             '<form action="DeletePatient" method="post">' +
                 '<input type="hidden" id="deletePatientID" name="patientID"/>' +
-                '<button type="submit" id="deletePatientButton" class="btn btn-secondary m-2 disabled" disabled>Delete</button>' +
+                '<button type="submit" id="deletePatientButton" class="btn btn-danger m-2 disabled" disabled>Delete</button>' +
             '</form>'+
         '</div>'
     );

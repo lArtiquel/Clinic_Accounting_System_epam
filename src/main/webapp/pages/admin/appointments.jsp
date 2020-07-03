@@ -144,7 +144,7 @@
 				</div>
 				<form action = "DeleteAppointmentsAfterDate" method = "post">
 					<div class="modal-body">
-						<div class="row justify-content-md-center my-3">
+						<div class="row justify-content-center my-3">
 							<div class="col-6">
 								<label for="deleteAppointmentsAfterDate">Date:</label>
 								<input id="deleteAppointmentsAfterDate" name="date" required />
@@ -152,7 +152,7 @@
 						</div>
 					</div><!-- end of modal body -->
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Delete</button>
 					</div>
                 </form>

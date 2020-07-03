@@ -148,7 +148,7 @@
 				</div>
 				<form action = "AddNewEvent" method = "post">
 					<div class="modal-body">
-						<div class="row justify-content-md-center my-3">
+						<div class="row justify-content-center my-3">
 							<div class="col-8">
 								<div class="row my-2">
 									<label for="newEventHeader"><b>Header:</b></label>
@@ -176,7 +176,7 @@
 						</div>
 					</div><!-- end of modal body -->
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Add event</button>
 					</div>
                 </form>
