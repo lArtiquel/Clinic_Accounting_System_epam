@@ -17,13 +17,16 @@
 Check deployed app [here](https://clinic-accounting-system.herokuapp.com/).
 
 Couple accounts with valid creds for you to test the app(please, don't change this creds):
-*admin role:
+
+* admin role:
     * login: admin;
     * pass: admin;
-*doc role:
+	
+* doc role:
 	* login: firstDoc;
 	* pass: firstDoc;
-*patient/user role:
+	
+* patient/user role:
 	* login: firstUser;
 	* pass: firstUser;
 	
@@ -56,107 +59,145 @@ If so, then write me on _tsvirkoartem@gmail.com_ and i'll fix it.
 ## Screenshots
 
 ### Sign In
-![](src/test/results/screenshots/common/sign_in.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/common/sign_in.jpg">
+</p>
 
 
 ### Registration
 
 #### Username and password
-![](src/test/results/screenshots/common/registration_u_p.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/common/registration_u_p.jpg">
+</p>
 
 #### Personal info application
-![](src/test/results/screenshots/common/registration-pers_info_application.jpg)
-
+<p align="center">
+	<img src="src/test/results/screenshots/common/registration-pers_info_application.jpg">
+</p>
 
 ### Password recovery by email
-![](src/test/results/screenshots/common/pass_recovery-enter_username.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/common/pass_recovery-enter_username.jpg">
+</p>
 
 
 ### Patient
 
 #### Managing account info
-![](src/test/results/screenshots/patient/patient-edit_personal_info.jpg)
-![](src/test/results/screenshots/patient/patient-edit_credentials.jpg)
-![](src/test/results/screenshots/patient/patient-edit_credentials_submission_result.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/patient/patient-edit_personal_info.jpg">
+	<img src="src/test/results/screenshots/patient/patient-edit_credentials.jpg">
+	<img src="src/test/results/screenshots/patient/patient-edit_credentials_submission_result.jpg">
+</p>
 
 #### Making appointments
-![](src/test/results/screenshots/patient/patient-make_app_form.jpg)
-![](src/test/results/screenshots/patient/patient-make_app_result.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/patient/patient-make_app_form.jpg">
+	<img src="src/test/results/screenshots/patient/patient-make_app_result.jpg">
+</p>
 
 
 ### Doctor
 
 #### Home Page
-![](src/test/results/screenshots/doctor/doctor-home_page.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/doctor/doctor-home_page.jpg">
+</p>
 
 #### Creating new events
-![](src/test/results/screenshots/doctor/doctor-add_new_event_form.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/doctor/doctor-add_new_event_form.jpg">
+</p>
 
 #### Personal information page
 
 ##### As patient
-![](src/test/results/screenshots/doctor/doctor-personal_information_as_a_patient.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/doctor/doctor-personal_information_as_a_patient.jpg">
+</p>
 ##### As doc
-![](src/test/results/screenshots/doctor/doctor-personal_information_as_a_doctor.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/doctor/doctor-personal_information_as_a_doctor.jpg">
+</p>
 ##### Changing personal info
-![](src/test/results/screenshots/doctor/doctor-personal_information_form.jpg)
-![](src/test/results/screenshots/doctor/doctor-personal_information_form_submission_result.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/doctor/doctor-personal_information_form.jpg">
+	<img src="src/test/results/screenshots/doctor/doctor-personal_information_form_submission_result.jpg">
+</p>
 
 #### Managing patients
-![](src/test/results/screenshots/doctor/doctor-find_patient_medicalHistory_changing_form.jpg)
-![](src/test/results/screenshots/doctor/doctor-find_patient_medicalHistory_changing_form_result.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/doctor/doctor-find_patient_medicalHistory_changing_form.jpg">
+	<img src="src/test/results/screenshots/doctor/doctor-find_patient_medicalHistory_changing_form_result.jpg">
+</p>
+
 #### Managing appointments
-![](src/test/results/screenshots/doctor/doctor-my_appointments_closing_appointment_form_submission_result.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/doctor/doctor-my_appointments_closing_appointment_form_submission_result.jpg">
+</p>
 
 
 ### Admin
 
 #### Home
-![](src/test/results/screenshots/admin/admin-home.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/admin/admin-home.jpg">
+</p>
 
 #### Managing events
-![](src/test/results/screenshots/admin/admin-create_event_form.jpg)
-![](src/test/results/screenshots/admin/admin-delete_event.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/admin/admin-create_event_form.jpg">
+	<img src="src/test/results/screenshots/admin/admin-delete_event.jpg">
+</p>
 
 #### Managing doctors
-![](src/test/results/screenshots/admin/admin-add_doctor_form.jpg)
-![](src/test/results/screenshots/admin/admin-add_doctor_form_2.jpg)
-![](src/test/results/screenshots/admin/admin-delete_doctor.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/admin/admin-add_doctor_form.jpg">
+	<img src="src/test/results/screenshots/admin/admin-add_doctor_form_2.jpg">
+	<img src="src/test/results/screenshots/admin/admin-delete_doctor.jpg">
+</p>
 
 #### Managing patients
-![](src/test/results/screenshots/admin/admin-edit_patients_info.jpg)
-![](src/test/results/screenshots/admin/admin-delete_patient.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/admin/admin-edit_patients_info.jpg">
+	<img src="src/test/results/screenshots/admin/admin-delete_patient.jpg">
+</p>
 
 #### Managing appointments
-![](src/test/results/screenshots/admin/admin-apps.jpg)
-![](src/test/results/screenshots/admin/admin-delete_apps_before_date.jpg)
+<p align="center">
+	<img src="src/test/results/screenshots/admin/admin-apps.jpg">
+	<img src="src/test/results/screenshots/admin/admin-delete_apps_before_date.jpg">
+</p>
 
 
 ### Recovery
 
 #### Email code
-![](src/test/results/screenshots/recovery/email_message.png)
+<p align="center">
+	<img src="src/test/results/screenshots/recovery/email_message.png">
+</p>
 
 #### Enter code page
-![](src/test/results/screenshots/recovery/enter_code.png)
+<p align="center">
+	<img src="src/test/results/screenshots/recovery/enter_code.png">
+</p>
 
 #### Pass recovery success
-![](src/test/results/screenshots/recovery/success.png)
-
+<p align="center">
+	<img src="src/test/results/screenshots/recovery/success.png">
+</p>
 
 ### Mobile look
-![](src/test/results/screenshots/mobile/login.jpg)
-![](src/test/results/screenshots/mobile/admin-doctors.jpg)
-![](src/test/results/screenshots/mobile/admin-doctors-addNew.jpg)
-![](src/test/results/screenshots/mobile/admin-doctors-addNew.jpg)
-![](src/test/results/screenshots/mobile/admin-appointments.jpg)
-![](src/test/results/screenshots/mobile/admin-appointments-delete.jpg)
+
+<p align="center">
+  <img src="src/test/results/screenshots/mobile/login.jpg" width="300" height="420">
+  <img src="src/test/results/screenshots/mobile/admin-doctors.jpg" width="300" height="420">
+  <img src="src/test/results/screenshots/mobile/admin-doctors-addNew.jpg" width="300" height="420">
+  <img src="src/test/results/screenshots/mobile/admin-appointments.jpg" width="300" height="420">
+  <img src="src/test/results/screenshots/mobile/admin-appointments-delete.jpg" width="300" height="420">
+</p>
 
 
-
-`Cheers!`
-
-
-
-
+**Cheers!**
 
