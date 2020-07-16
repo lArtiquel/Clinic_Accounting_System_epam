@@ -1,7 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=US-ASCII"
-	pageEncoding="US-ASCII" %>
-<%@ page isELIgnored = "false" %>
-<%@ page session = "true" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="context" value="${pageContext.request.contextPath}" />
 
@@ -9,22 +6,22 @@
 <html lang="en">
   <head>
 	<title>Doctor's Account Page</title>
-    <!-- Required meta tags -->
+	  <!-- Required meta tags -->
     <meta charset="utf-8">
 	<meta name="author" content="Artique">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-<!-- My Page Favicon -->
+	  <!-- My Page Favicon -->
 	<link rel="icon" type="image/png" href="${context}/static/images/icons/favicon.ico">
-<!-- Latest Bootstrap and datatables Bootstrap API ================================================-->
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
-<!-- My CSS -->
+	  <!-- Latest Bootstrap and datatables Bootstrap API ================================================-->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
+	  <!-- My CSS -->
 	<link rel="stylesheet" type="text/css" href="${context}/static/css/myBackgrounds.css">
-	
-<!-- JQuery, Bootstrap 4 -->
+	  <!-- JQuery, Bootstrap 4 -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
-	
+	  <!-- Font Awesome Glyphs -->
+	<script src="https://kit.fontawesome.com/7685c16a3d.js" crossorigin="anonymous"></script>
+
 	<%-- Injecting error message if we have one --%>
 	<c:if test = "${sessionScope.message != null}">
 		<%-- Snackbar css and js function definition --%>
@@ -44,16 +41,18 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarAltContent">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="home">Home Page</a>
+				<a class="nav-item nav-link" href="home">Home</a>
 				<a class="nav-item nav-link active" href="account">Account<span class="sr-only">(current)</span></a>
-				<a class="nav-item nav-link" href="pers_info">Personal Information</a>
-				<a class="nav-item nav-link" href="see_doctor">See Doctor</a>
-				<a class="nav-item nav-link" href="find_patient">Find Patient</a>
-				<a class="nav-item nav-link" href="my_appointments">My Appointments</a>
+				<a class="nav-item nav-link" href="profile">Personal Information</a>
+				<a class="nav-item nav-link" href="doctors">See Doctor</a>
+				<a class="nav-item nav-link" href="patients">Find Patient</a>
+				<a class="nav-item nav-link" href="appointments">My Appointments</a>
 			</div>
 		</div>
-		<form class="form-inline" action="../sign_out" method = "post">
-			<button class="btn btn-info btn-lg my-2 my-sm-0" type="submit">Sign out</button>
+		<form class="form-inline" action="../logout" method = "post">
+			<button class="btn my-1" type="submit">
+				<i class="fas fa-sign-out-alt"></i>
+			</button>
 		</form>
 	</nav>
 
@@ -61,22 +60,22 @@
 			<div class="text-center my-3">
 				<h3 class="bg-secondary text-white">&darr;Account Information&darr;</h3>
 			</div>
-	
-			<div class = "row justify-content-md-center my-3">
-				<div class="col-6">
+
+			<div class = "row justify-content-center my-3">
+				<div class="col-xs-12 col-lg-6">
 					<label class="bg-dark text-white" for="username"><b>Username:</b></label>
 					<input class="form-control" id="username" value="${requestScope.username}" readonly></input>   
 				</div>
 			</div>
-			<div class = "row justify-content-md-center my-3">
-				<div class="col-6">
+			<div class = "row justify-content-center my-3">
+				<div class="col-xs-12 col-lg-6">
 					<label class="bg-dark text-white" for="username"><b>Password:</b></label>
-					<input class="form-control" id="password" value="${requestScope.password}" readonly></input>   
+					<input type="password" class="form-control" id="password" value="${requestScope.password}" readonly></input>
 				</div>
 			</div>
-			
-			<div class="row justify-content-md-center my-3">
-				<div class="col-6">
+
+			<div class = "row justify-content-center my-3">
+				<div class="col-xs-12 col-lg-6">
 					<button class = "form-control btn btn-primary" data-toggle="modal" data-target="#editAccountInfoModal">Edit Account Information</button>
 				</div>
 			</div>
@@ -92,7 +91,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<form action = "editAccountInfo" method = "post">
+				<form action = "EditCredentials" method = "post">
 					<div class="modal-body">
 						<div class="row col-12">
 							<div class="col-6">
@@ -120,7 +119,7 @@
 						</div>
 					</div><!-- end of modal body -->
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Edit</button>
 					</div>
 				</form>

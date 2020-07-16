@@ -1,6 +1,7 @@
 # Clinic Accounting System
 
-Clinic Accounting System tech stack:
+
+### Clinic Accounting System tech stack:
 * Java 8.
 * Servlets.
 * MySQL.
@@ -10,6 +11,24 @@ Clinic Accounting System tech stack:
 * Log4j.
 * Lombok.
 * JavaMail.
+
+### Deploy
+
+Check deployed app [here](https://clinic-accounting-system.herokuapp.com/).
+
+Couple accounts with valid creds for you to test the app(please, don't change this creds):
+*admin role:
+    * login: admin;
+    * pass: admin;
+*doc role:
+	* login: firstDoc;
+	* pass: firstDoc;
+*patient/user role:
+	* login: firstUser;
+	* pass: firstUser;
+	
+If you are getting page with 500 error code when trying to login, that, probably, means that my hosting time for MySql db expired. 
+If so, then write me on _tsvirkoartem@gmail.com_ and i'll fix it.
 
 ## Functionality overview:
 
@@ -111,3 +130,33 @@ Clinic Accounting System tech stack:
 #### Managing appointments
 ![](src/test/results/screenshots/admin/admin-apps.jpg)
 ![](src/test/results/screenshots/admin/admin-delete_apps_before_date.jpg)
+
+
+### Recovery
+
+#### Email code
+![](src/test/results/screenshots/recovery/email_message.png)
+
+#### Enter code page
+![](src/test/results/screenshots/recovery/enter_code.png)
+
+#### Pass recovery success
+![](src/test/results/screenshots/recovery/success.png)
+
+
+### Mobile look
+![](src/test/results/screenshots/mobile/login.jpg)
+![](src/test/results/screenshots/mobile/admin-doctors.jpg)
+![](src/test/results/screenshots/mobile/admin-doctors-addNew.jpg)
+![](src/test/results/screenshots/mobile/admin-doctors-addNew.jpg)
+![](src/test/results/screenshots/mobile/admin-appointments.jpg)
+![](src/test/results/screenshots/mobile/admin-appointments-delete.jpg)
+
+
+
+`Cheers!`
+
+
+
+
+

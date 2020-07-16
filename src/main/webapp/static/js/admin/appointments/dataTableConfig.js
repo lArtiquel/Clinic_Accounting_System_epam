@@ -4,9 +4,9 @@ $(document).ready(function () {
     $('#dtAppointments').DataTable({
         "pagingType": "full_numbers",
         "order": [[ 0, "asc" ]],
-        "dom": "<'row mx-3 my-2 font-italic'<'col-6'<'dtAppointmentsButtonToolbar'>><'col-6'f>>" +
-            "<'row'<'col-sm-12'tr>>" +
-            "<'row mx-3 my-2'<'col-6'i><'col-6'p>>",
+        "dom": "<'row mx-3 my-2 font-italic'<'col-xs-12 col-md-6'<'dtAppointmentsButtonToolbar'>><'col-xs-12 col-md-6'f>>" +
+            "<'row'<'col-12'tr>>" +
+            "<'row mx-3 my-2'<'col-xs-12 col-md-6'i><'col-xs-12 col-md-6'p>>",
         "select": {"style": 'single'},
         "processing": true,
         "responsive": true
@@ -14,8 +14,8 @@ $(document).ready(function () {
 
     // setting content to aforementioned table button's toolbar
     $("div.dtAppointmentsButtonToolbar").html(
-        '<div class="row col-12">'+
-            '<button id="deleteButton" class="btn btn-primary mx-2" data-toggle="modal" data-target="#deleteAppointmentsModal">Delete by date</button>'+
+        '<div class="d-flex justify-content-center justify-content-xl-start">'+
+            '<button id="deleteButton" class="btn btn-danger m-2" data-toggle="modal" data-target="#deleteAppointmentsModal">Delete by date</button>'+
         '</div>'
     );
 

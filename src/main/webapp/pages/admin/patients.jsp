@@ -1,7 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=US-ASCII"
-	pageEncoding="US-ASCII" %>
-<%@ page isELIgnored = "false" %>
-<%@ page session = "true" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="context" value="${pageContext.request.contextPath}" />
 
@@ -9,30 +6,25 @@
 <html lang="en">
   <head>
 	<title>Admin's Patients Page</title>
-    <!-- Required meta tags -->
+	  <!-- Required meta tags -->
     <meta charset="utf-8">
 	<meta name="author" content="Artique">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-<!-- My Page Favicon -->
+	  <!-- My Page Favicon -->
 	<link rel="icon" type="image/png" href="${context}/static/images/icons/favicon.ico">
-<!-- Latest Bootstrap ================================================-->
+	  <!-- Latest Bootstrap ================================================-->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
-<!-- Latest Datatable's Bootstrap API ==============================================================-->
+	  <!-- Latest Datatable's Bootstrap API ==============================================================-->
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
-<!-- Datatable's Buttons, Responsivness and Selection ==============================================-->
+	  <!-- Datatable's Buttons, Responsivness and Selection ==============================================-->
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.bootstrap4.min.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.bootstrap4.min.css"/>
-
-<!-- Date picker css -->
-	<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/>	
-	
-<!-- My CSS -->
+	  <!-- Date picker css -->
+	<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
+	  <!-- My CSS -->
 	<link rel="stylesheet" type="text/css" href="${context}/static/css/myBackgrounds.css">
-	
-	
-<!--JQuery, Bootstrap 4, Buttons, Responsivness, selection here-->
+	  <!--JQuery, Bootstrap 4, Buttons, Responsivness, selection here-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
@@ -42,11 +34,11 @@
 	<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
-
-<!-- Date picker -->
+	  <!-- Date picker -->
 	<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-	
-<!-- My scripts -->
+	  <!-- Font Awesome Glyphs -->
+	<script src="https://kit.fontawesome.com/7685c16a3d.js" crossorigin="anonymous"></script>
+	  <!-- My scripts -->
 	<script type="text/javascript" src="${context}/static/js/utils/utils.js"></script>
 	<script type="text/javascript" src="${context}/static/js/admin/patients/dataTableConfig.js"></script>
 	<script type="text/javascript" src="${context}/static/js/admin/patients/datePickerConfig.js"></script>
@@ -76,8 +68,10 @@
 				<a class="nav-item nav-link" href="appointments">Appointments</a>
 			</div>
 		</div>
-		<form class="form-inline" action="../sign_out" method = "post">
-			<button class="btn btn-info btn-lg my-2 my-sm-0" type="submit">Sign out</button>
+		<form class="form-inline" action="../logout" method = "post">
+			<button class="btn my-1" type="submit">
+				<i class="fas fa-sign-out-alt"></i>
+			</button>
 		</form>
 	</nav>
 	
@@ -88,7 +82,7 @@
             <h3 class="bg-secondary text-white">&darr;Here you can manage patients&darr;</h3>
         </div>
 	
-		<div class="table-responsive">
+		<div class="table-responsive mb-3">
             <table id="dtPatients" class="table table-hover table-bordered table-sm bg-info text-white">
                 <thead>
                     <tr class="bg-dark text-white">
@@ -157,7 +151,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<form action = "editPatient" method = "post">
+				<form action = "EditPatient" method = "post">
 					<div class="modal-body">
 					
 						<input type="hidden" id="editPatientID" name="patientID" />
@@ -166,7 +160,7 @@
 
 							<div class="col-5">
 								<div class="row my-2">
-									<h4 class="text-danger text-center">&darr;Old patient's account information&darr;</h4>
+									<h5 class="text-danger text-center">&darr;Old patient's account information&darr;</h5>
 								</div>
 								<div class="row my-2">
 									<label for="oldPatUsername"><b>Username:</b></label>
@@ -180,7 +174,7 @@
 							
 							<div class="col-5">
 								<div class="row my-2">
-									<h4 class="text-success text-center">&darr;New patient's account information&darr;</h4>
+									<h5 class="text-success text-center">&darr;New patient's account information&darr;</h5>
 								</div>
 								<div class="row my-2">
 									<label for="newPatUsername"><b>Username:</b></label>
@@ -199,7 +193,7 @@
 						
 							<div class="col-5">
 								<div class="row my-2">
-									<h4 class="text-danger text-center">&darr;Old patient's personal information&darr;</h4>
+									<h5 class="text-danger text-center">&darr;Old patient's personal information&darr;</h5>
 								</div>
 								<div class="row my-2">
 									<label for="oldPatFirstname"><b>First Name:</b></label>
@@ -233,7 +227,7 @@
 							
 							<div class="col-5">
 								<div class="row my-2">
-									<h4 class="text-success text-center">&darr;New patient's personal information&darr;</h4>
+									<h5 class="text-success text-center">&darr;New patient's personal information&darr;</h5>
 								</div>
 								<div class="row my-2">
 									<label for="newPatFirstname"><b>First Name:</b></label>
@@ -269,7 +263,7 @@
 							
 					</div><!-- end of modal body -->
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Edit patient info</button>
 					</div>
                 </form>
